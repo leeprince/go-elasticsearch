@@ -1,0 +1,53 @@
+// Licensed to Elasticsearch B.V. under one or more contributor
+// license agreements. See the NOTICE file distributed with
+// this work for additional information regarding copyright
+// ownership. Elasticsearch B.V. licenses this file to you under
+// the Apache License, Version 2.0 (the "License"); you may
+// not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
+
+
+// Code generated from the elasticsearch-specification DO NOT EDIT.
+// https://github.com/elastic/elasticsearch-specification
+
+
+package types
+
+// LoggingResult type.
+type LoggingResult struct {
+	LoggedText string `json:"logged_text"`
+}
+
+// LoggingResultBuilder holds LoggingResult struct and provides a builder API.
+type LoggingResultBuilder struct {
+	v *LoggingResult
+}
+
+// NewLoggingResult provides a builder for the LoggingResult struct.
+func NewLoggingResult() *LoggingResultBuilder {
+	r := LoggingResultBuilder{
+		&LoggingResult{},
+	}
+
+	return &r
+}
+
+// Build finalize the chain and returns the LoggingResult struct
+func (rb *LoggingResultBuilder) Build() LoggingResult {
+	return *rb.v
+}
+
+// LoggedText set the LoggedText property for LoggingResultBuilder.
+func (rb *LoggingResultBuilder) LoggedText(loggedtext string) *LoggingResultBuilder {
+	rb.v.LoggedText = loggedtext
+	return rb
+}
